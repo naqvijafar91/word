@@ -28,3 +28,4 @@ Strings are faster than byte array for comparisons, that is why, strings are use
 
 ### Improvements
 A combination of BST and heap can be used instead of plain BST, this would make fetching the top 20 elements possible in logarithmic time complexity. 
+https://en.wikipedia.org/wiki/Treap
