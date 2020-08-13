@@ -16,18 +16,18 @@ func TestShouldConvertParagraph(t *testing.T) {
 	textToWordsConverter := NewTextToWordsConverter()
 	store := textToWordsConverter.ProcessAndConvertToWordCountStore(text)
 	if store.GetCountForWord("of") != 7 {
-		t.Errorf("Count should have been %d but it is %d", 2, store.GetCountForWord("my"))
+		t.Errorf("Count should have been %d but it is %d", 7, store.GetCountForWord("of"))
 	}
 	if store.GetCountForWord("the") != 8 {
-		t.Errorf("Count should have been %d but it is %d", 1, store.GetCountForWord("the"))
+		t.Errorf("Count should have been %d but it is %d", 8, store.GetCountForWord("the"))
 	}
 	if store.GetCountForWord("literature") != 2 {
-		t.Errorf("Count should have been %d but it is %d", 1, store.GetCountForWord("warmth"))
+		t.Errorf("Count should have been %d but it is %d", 2, store.GetCountForWord("literature"))
 	}
 	if store.GetCountForWord("has") != 1 {
-		t.Errorf("Count should have been %d but it is %d", 1, store.GetCountForWord("you"))
+		t.Errorf("Count should have been %d but it is %d", 1, store.GetCountForWord("has"))
 	}
 	if store.GetCountForWord("lorem") != 5 {
-		t.Errorf("Count should have been %d but it is %d", 1, store.GetCountForWord("in"))
+		t.Errorf("Count should have been %d but it is %d", 5, store.GetCountForWord("lorem"))
 	}
 }
