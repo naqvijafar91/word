@@ -10,7 +10,7 @@ func TestAddOrIncrementCountPart1(t *testing.T) {
 	}
 	store.AddOrIncrementCount("jafar")
 	if store.GetCountForWord("jafar") != 2 {
-		t.Errorf("Count should be 1")
+		t.Errorf("Count should be 2")
 	}
 }
 
