@@ -1,4 +1,4 @@
-Steps to execute:
+### Steps to execute:
 
 Change to the cmd directory
 
@@ -8,7 +8,7 @@ Run the executable generated, this would execute the main function which accepts
 
 Note: The code works for go 1.8 and above 
 
-Tests:
+### Tests:
 
 I have written unit test cases as well just to be sure that the code is working properly.
 
@@ -26,5 +26,5 @@ Strings are faster than byte array for comparisons, that is why, strings are use
 2. TextToWordsConverter: Transforms that string into a WordCountStore.
 3. WordCountStore: The struct which wraps the BST which holds the complete data set.
 
-**Improvements**
+### Improvements
 A combination of BST and heap can be used instead of plain BST, this would make fetching the top 20 elements possible in logarithmic time complexity. 
