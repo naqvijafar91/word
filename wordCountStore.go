@@ -25,7 +25,8 @@ type treeNode struct {
 }
 
 // BSTBackedWordCountStore uses a Binary Search Tree to store a word count pair, the tree is sorted alphabetically.
-// With the help of this tree, we have O(logN) insertion and lookup time.
+// With the help of this tree, we have O(logN) insertion and lookup time. Fetching top 20 elements takes  O(NlogN) time
+// but since we are only doing it once, that is acceptable. A treap can be used to improve that as well.
 // ---------------------------------------------------------------------
 // We can use a sorted slice based word count store, but that would give O(n) insertion time: O(logN) for finding the
 // spot to insert and O(n) for shifting the remaining elements, so total O(n)
@@ -33,7 +34,7 @@ type treeNode struct {
 // We can alse use a linked list, this would require no shifting and anything can be inserted in between, but it requires
 // O(N) time to find the insertion spot.
 // ---------------------------------------------------------------------
-// NOTE: Using a map is the best approach for this kind of scenario, but since we cannot use it for this test, I have
+// NOTE: Using a map is the direct approach for this kind of scenario, but since we cannot use it for this test, I have
 // implemented via BST which is the next best thing. I could have implemented my own map from scratch, but I think
 // that is not something which was asked out of this assignment.
 type BSTBackedWordCountStore struct {
